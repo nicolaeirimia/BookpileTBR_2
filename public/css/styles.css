@@ -13,7 +13,7 @@ body{
    width: 80%;
 } 
 .container h1{
-  font-size: 60px;
+  font-size: 60px !important;
 }
 .container-body{
   padding-bottom: 20px;

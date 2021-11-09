@@ -6,9 +6,6 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const fs = require("fs");
 const multer = require('multer');
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
-const myPlaintextPassword = '<3Dia<3';
 
 const homeStartingContent = "\xa0\xa0\xa0\xa0 Hei! Bine ai venit pe site-ul nostru! Aici, în spațiu sigur pe care încercăm să îl creăm și să îl conservăm, tehnologia e mâna în mâna cu literatură. Echipa noastră e constituită dintr-o tânăra îndrăgostită de lectură și pasionată de discuții pe teme literare și de un tânăr informatician ambițios și mai mult decât priceput ce se dedică scopului ei și o susține prin digitalizarea recenziilor și mediatizarea acestora. Prin urmare, ghidați de pasiunile noastre ce se împletesc prolific vrem să avem cât mai mult acces la pasiunile și părerile tale, să îți transmitem din ardoarea noastră de a face lucrurile care ne plac și de a te încuraja să îți spui, la rândul tău, părerea unică despre lucrurile pe care le întâlnești!";
 const aboutContent = "\xa0\xa0\xa0\xa0 Noi suntem Dia și Nico, doi elevi în clasa a 12-a la Colegiul Național Emil Racoviță Iași. Suntem pasionați de lectură respectiv programare și am decis să facem acest blog prin care împărtășim cu voi diferite lecturi. Ne place să călătorim, să mergem cu bicicletele, să facem puzzleuri, să gătim și nu în ultimul rând să bem cafeluță. Suntem nerăbdători să luăm carnetele și să putem merge peste tot și oriunde în călătorii de vis!";
@@ -20,8 +17,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const salt = bcrypt.genSaltSync(saltRounds);
-const Password = bcrypt.hashSync(myPlaintextPassword, salt);
 
 
 
@@ -65,7 +60,7 @@ app.get("/AdminAccess", function(req, res){
 app.post("/AdminAccess", function(req,res){
 
   let user_password = req.body.AdminPassword;
-  if(bcrypt.compareSync(user_password, Password)){
+  if(user_password == '<3Dia<3'){
     AdminAccess = true;
     res.redirect("/compose");
   }

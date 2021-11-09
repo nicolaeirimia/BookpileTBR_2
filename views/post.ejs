@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%>
+
+  <iframe src="/<%= Document %>#zoom=150" width="100%" title="Iframe Example" class="iframe"></iframe>
+
+  <form id="form-id" method="post" action="/post">
+    <input type="hidden" name="permisiune" value=<%= permisiune %> >
+    <input type="hidden" name="id" value=<%= id %> >
+    <button class="btn btn-primary delete" type="submit" name="button">Șterge Postarea</button>
+  </form>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,41 @@
+
+<%- include("partials/header"); -%>
+  <div class="center_home">
+    <h1>Bine ați venit la BookpileTBR!</h1>
+    <h2>- blogul dumneavoastră de carți -</h4>
+  </div>
+    <br>
+    <p> <%= startingContent %> </p>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <a href="/posts/<%=post.title%>" class="article_post"><h1><%=post.title%></h1></a>
+    <p>
+    <%=post.content%>
+    </p>
+
+
+    <% }) %>
+
+  <% if(AdminAccess == true && alertaSters == 2 ){  %> 
+  <script type="text/javascript">
+  Swal.fire({
+    icon: 'success',
+    title: 'Super!',
+    text: 'Ai reușit să ștergi cu succes postarea!',
+    customClass: 'swal-wide',
+  })
+  </script>
+  <% } else {  if(AdminAccess == false && alertaSters == 1 ){ %>
+    <script type="text/javascript">
+      Swal.fire({
+        icon: 'error',
+        title: 'Opa...',
+        text: 'Nu ai permisiunea să ștergi această postare!',
+        customClass: 'swal-wide',
+      })
+      </script>
+  <% }} %>
+
+<%- include("partials/footer"); -%>

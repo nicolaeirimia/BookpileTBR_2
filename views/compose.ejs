@@ -1,0 +1,23 @@
+
+<%- include("partials/header"); -%>
+<div class="compose-div">
+    <h1>Compune</h1>
+    <form class="" action="/compose" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Titlu</label>
+        <input class="form-control" type="text" name="postTitle">
+        <label>Descriere</label>
+        <input class="form-control" type="text" name="postBody">
+        <br>
+        <input type="file" id="postDocument" name="document">
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publică</button>
+    </form>
+
+    <form id="form-id" method="post" action="/compose_logout">
+      <input type="hidden" name="access" value="false">
+      <button class="btn btn-primary delete" type="submit" name="button">Deconectează-te</button>
+    </form>
+  </div>
+
+<%- include("partials/footer"); -%>

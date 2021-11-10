@@ -18,9 +18,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-
-
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
       cb(null, './public/Documents');

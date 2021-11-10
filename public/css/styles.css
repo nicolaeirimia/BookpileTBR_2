@@ -6,48 +6,39 @@ html {
 
 body{
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: justify;
+  background-color: #FCF0C8;
 }
  .container{
    width: 80%;
 } 
 .container h1{
-  font-size: 60px !important;
+  font-size: 60px;
 }
 .container-body{
   padding-bottom: 20px;
 }
-.nav-container{
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-}
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 5px;
+    background-color: #FACE7F;
 }
- .logo{
-  width: 20%;
-} 
+.navbar-nav a{
+  color: #630A10 !important;
+  font-weight: bolder;
+}
 .navbar-nav  li a:hover {
     color: #911F27 !important;
     text-decoration: underline;
 }
-
+.swal-wide{
+  zoom: 1.5;
+}
 .footer-padding {
 	padding-bottom: 60px;
 }
@@ -78,9 +69,6 @@ body{
 .form-control{
   height: 60px;
   font-size: 30px;
-}
-.swal-wide{
-  zoom:3;
 }
 #form-id{
   text-align: center;

@@ -43,7 +43,6 @@ app.get("/", function(req, res){
     alertaSters: alertaSters
     });
     alertaSters = 0;
-    console.log(posts);
 });
 
 app.get("/about", function(req, res){

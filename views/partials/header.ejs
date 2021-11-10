@@ -7,10 +7,19 @@
   <link rel="shortcut icon" type="image/jpg" href="/poze/favicon.png"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+  $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+});
+  </script>
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -26,4 +35,7 @@
   </nav>
 
   <body>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <div class="container container-body">
